@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Топ букмекерских контор</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="rating-card" aria-labelledby="rating-title">
+        <div class="card-inner">
+          <header class="rating-card__header">
+            <h1 class="title title--desktop" id="rating-title-desktop">Топ букмекерских контор</h1>
+            <h1 class="title title--mobile" id="rating-title-mobile">Рейтинг букмекерских контор</h1>
+            <button class="card-more" aria-label="Доп. меню" type="button"><span></span><span></span><span></span></button>
+          </header>
+          <nav class="tabs" role="tablist" aria-label="Рейтинг вкладки">
+            <button class="tabs__btn is-active" role="tab" aria-selected="true" data-type="byuser">Народный рейтинг</button>
+            <button class="tabs__btn" role="tab" aria-selected="false" data-type="byeditors">Рейтинг редакции</button>
+            <button class="tabs__btn" role="tab" aria-selected="false" data-type="bybonus">Рейтинг по бонусу</button>
+            <button class="tabs__btn" role="tab" aria-selected="false" data-type="bysubrating" data-id="reliability">Рейтинг по надежности</button>
+          </nav>
+
+          <div class="table" role="table" aria-label="Таблица букмекеров">
+          <div class="table__head" role="rowgroup" aria-hidden="true"></div>
+          <div id="table-body" class="table__body" role="rowgroup" aria-live="polite" aria-busy="true"></div>
+          </div>
+        </div>
+        <footer class="rating-card__footer">
+        <a class="link-more link-more--desktop" href="#">Смотреть дальше<img src="icons/short left.svg" alt="" width="16" height="16"></a>
+        <a class="link-more link-more--mobile" href="#">СМОТРЕТЬ ПОЛНЫЙ РЕЙТИНГ</a>
+        <a class="link-how" href="#">Как формируется рейтинг?</a>
+        </footer>
+      </section>
+    </main>
+
+    <template id="row-template">
+      <div class="table__row" role="row">
+        <div class="table__cell table__cell--bk" role="cell">
+          <span class="bk-wrap">
+            <img class="bk-logo" alt="Логотип букмекера" />
+            <img class="verified" src="icons/verified.png" alt="Верифицировано" />
+          </span>
+        </div>
+        <div class="table__cell table__cell--rating" role="cell">
+          <div class="stars" aria-label="Рейтинг">
+            <div class="stars__fill"></div>
+          </div>
+          <span class="rating-text"></span>
+        </div>
+        <div class="table__cell table__cell--reviews" role="cell">
+          <span class="icon icon--chat" aria-hidden="true"></span>
+          <span class="reviews-text"></span>
+        </div>
+        <div class="table__cell table__cell--bonus" role="cell">
+          <span class="badge"></span>
+          <span class="bonus-text"></span>
+        </div>
+        <div class="table__cell table__cell--actions" role="cell">
+          <a class="btn btn--ghost" target="_self" rel="noopener" data-role="review">Обзор</a>
+          <a class="btn btn--primary" target="_blank" rel="nofollow noopener" data-role="site">Сайт</a>
+        </div>
+      </div>
+    </template>
+
+    <script src="script.js" defer></script>
+  </body>
+  </html>
+
+
