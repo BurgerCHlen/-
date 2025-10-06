@@ -2,14 +2,6 @@
 
 Статическая страница без сборки. Откройте `index.html` в браузере.
 
-## Локальный сервер (по желанию)
-```bash
-python -m http.server 5173
-# или
-npx serve -l 5173
-```
-Перейдите на `http://localhost:5173`.
-
 ## Функциональность
 - Вкладки переключают режимы рейтинга и инициируют «запрос».
 - Имитация API: `GET /topbk?type=byuser|byeditors|bybonus|bysubrating&id=reliability`.
@@ -20,3 +12,4 @@ npx serve -l 5173
 - `index.html` — разметка и шаблон строки
 - `styles.css` — стили и адаптив
 - `script.js` — логика вкладок и mock API
+
